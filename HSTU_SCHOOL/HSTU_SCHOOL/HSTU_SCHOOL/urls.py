@@ -1,9 +1,12 @@
-from django.conf.urls import url
+
 from django.contrib import admin
-from django.urls import include
+from django.urls import path,include
 
 urlpatterns = [
-    url('admin/', admin.site.urls),
-    url('',include('hstu_school.urls'))
+    path('admin/', admin.site.urls),
+    path('',include('hstu_school.urls')),
+
+    
+
 
 ]

@@ -1,10 +1,8 @@
-from django.conf.urls import url
-from django.urls import path, include
+from django.urls import path
 
-from hstu_school import views
+from . import views
 
 urlpatterns = [
-    url('', views.home,name='home'),
-
+    path('', views.home,name='home'),
 
 ]
