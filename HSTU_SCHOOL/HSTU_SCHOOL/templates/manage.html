@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="post">
+{% csrf_token %}
+<label class="form-group" for="name">Name : </label>
+<input class="form-control" type="text" name="name"><br>
+
+<label class="form-group" for="job">Job : </label>
+<input class="form-control" type="text" name="job"><br>
+
+<label class="form-group" for="contact">Contact : </label>
+<input class="form-control" type="text" name="contact"><br>
+
+<label class="form-group" for="photo">Photo : </label>
+<input class="form-control" type="file" name="photo"><br>
+
+<input class="btn btn-info" type="submit" value="Submit"><br>
+
+
+
+</form>
+{% endblock %}

@@ -9,7 +9,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Material Design Bootstrap</title>
+  <title>HSTU-SCHOOL</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -64,7 +64,7 @@
       <div class="container">
 
         <!-- Brand -->
-        <a class="navbar-brand" href="" target="_blank">
+        <a class="navbar-brand" href="/" target="_blank">
           <strong>HOME</strong>
         </a>
 
@@ -80,25 +80,28 @@
           <!-- Left -->
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="" target="_blank">History</a>
+              <a class="nav-link" href="/history" target="_blank">History</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="" target="_blank">About Us</a>
+              <a class="nav-link" href="/about" target="_blank">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="" target="_blank">Teacher List</a>
+              <a class="nav-link" href="/teacher-list" target="_blank">Teacher List</a>
             </li>
              <li class="nav-item">
-              <a class="nav-link" href="" target="_blank">Staff List</a>
+              <a class="nav-link" href="/staff-list" target="_blank">Staff List</a>
             </li>
              <li class="nav-item">
-              <a class="nav-link" href="" target="_blank">Notices</a>
+              <a class="nav-link" href="/notice" target="_blank">Notices</a>
             </li>
              <li class="nav-item">
-              <a class="nav-link" href="" target="_blank">Events</a>
+              <a class="nav-link" href="/event" target="_blank">Events</a>
             </li>
              <li class="nav-item">
-              <a class="nav-link" href="" target="_blank">News</a>
+              <a class="nav-link" href="/news" target="_blank">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/manage" target="_blank">Manage</a>
             </li>
 
 
@@ -112,6 +115,16 @@
             <li class="nav-item">
               <a href="" class="nav-link" target="_blank">
                 <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+             <li class="nav-item">
+              <a href="" class="nav-link" target="_blank">
+               <i class="fa fa-envelope"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link" target="_blank">
+              <i class="fa fa-phone"></i>
               </a>
             </li>
 
@@ -266,32 +279,24 @@
     <!--/.Carousel Wrapper-->
 
   </header>
+{% block content %}
 
-  <!--Main layout-->
-  <main>
-    <div class="container">
-
-      <!--Section: Main info-->
-      <section class="mt-5 wow fadeIn">
-
-        <!--Grid row-->
-        <div class="row">
-
-          {% block content %}
-            {% endblock %}
-
-
-        </div>
-        <!--Grid row-->
-
-      </section>
-
-    </div>
-  </main>
-  <!--Main layout-->
-
+  {% endblock %}
   <!--Footer-->
   <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+    <!--Call to action-->
+    <div class="pt-4">
+      <a class="btn btn-outline-white" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" target="_blank"
+        role="button">Download MDB
+        <i class="fas fa-download ml-2"></i>
+      </a>
+      <a class="btn btn-outline-white" href="https://mdbootstrap.com/education/bootstrap/" target="_blank" role="button">Start
+        free tutorial
+        <i class="fas fa-graduation-cap ml-2"></i>
+      </a>
+    </div>
+    <!--/.Call to action-->
 
     <hr class="my-4">
 
