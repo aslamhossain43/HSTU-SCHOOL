@@ -1,22 +1,37 @@
 
 {% extends 'base.html' %}
 {% block content %}
+<br>
+<h3 id="teacherFormHeading">Please Add Teacher</h3>
+<hr>
 {% if not updateTeacher %}
-<form action="/addTeacherList/" method="post" enctype="multipart/form-data">
+<form action="/addTeacherList/" method="post" enctype="multipart/form-data" class="was-validated">
 {% csrf_token %}
 <label class="form-group" for="name">Name : </label>
-<input class="form-control" type="text" name="name"><br>
+<input class="form-control" type="text" name="name" autocomplete="off" required>
+    <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    <br>
 
 <label class="form-group" for="job">Job : </label>
-<input class="form-control" type="text" name="job"><br>
+<input class="form-control" type="text" name="job" autocomplete="off" required>
+    <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    <br>
 
 <label class="form-group" for="contact">Contact : </label>
-<input class="form-control" type="text" name="contact"><br>
+<input class="form-control" type="text" name="contact" autocomplete="off" required>
+    <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    <br>
 
 <label class="form-group" for="photo">Photo : </label>
-<input class="form-control" type="file" name="photo"><br>
+<input class="form-control" type="file" name="photo" autocomplete="off" required>
+<div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    <br>
 
-<input class="btn btn-info" type="submit" value="Submit"><br>
+<input class="btn btn-info " type="submit" value="Submit"><br>
 
 
 
@@ -38,15 +53,17 @@
 <label class="form-group" for="photo">Photo : </label>
 <input class="form-control" type="file" name="photo"><br>
 
-<input class="btn btn-info" type="submit" value="Submit"><br>
+<input class="btn btn-info col-sm-offset-4 col-md-offset-4 col-lg-offset-4" type="submit" value="Submit"><br>
 
 
 
 </form>
 
 {% endif %}
-
-<table class="table table-dark">
+<br>
+<h3 id="teacherDataTableHeading">Teacher List Is Given Below</h3>
+<hr>
+<table class="table table-striped table-bordered" style="width:100%" id="manageTeacherTable">
 <thead>
 
 <tr>
@@ -66,7 +83,7 @@
     <td>{{t.contact}}</td>
 
     <td>
-        <a href="/editTeacher/{{t.id}}" class="btn btn-info">Edit</a>
+        <a id="teacherEditButton" href="/editTeacher/{{t.id}}" class="btn btn-info">Edit</a>
         <a href="/deleteTeacher/{{t.id}}" class="btn btn-danger">Delete</a>
 
     </td>

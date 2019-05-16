@@ -18,6 +18,11 @@
   <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="{% static 'css/style.min.css' %}" rel="stylesheet">
+  <!--dataTables css-->
+  <link href="{% static 'customdatatablelib/dataTables.bootstrap4.min.css' %}" rel="stylesheet">
+<!--custom css-->
+  <link href="{% static 'customcss/teacher.css' %}" rel="stylesheet">
+
   <style type="text/css">
     html,
     body,
@@ -279,9 +284,15 @@
     <!--/.Carousel Wrapper-->
 
   </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12  col-lg-12">
 {% block content %}
 
   {% endblock %}
+  </div>
+  </div>
+  </div>
   <!--Footer-->
   <footer class="page-footer text-center font-small mt-4 wow fadeIn">
 
@@ -355,6 +366,13 @@
   <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+  <!--dataTable js-->
+   <script type="text/javascript" src="{% static 'customdatatablelib/dataTables.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'customdatatablelib/dataTables.bootstrap4.min.js' %}"></script>
+
+  <!--custom javascript-->
+  <script type="text/javascript" src="{% static 'customjs/teacher.js' %}"></script>
+
   <!-- Initializations -->
   <script type="text/javascript">
     // Animations initialization
