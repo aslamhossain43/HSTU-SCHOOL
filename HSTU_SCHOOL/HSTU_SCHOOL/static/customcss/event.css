@@ -1,25 +1,23 @@
 /* for staff*/
-#staffDataTableHeading{
+#eventDataTableHeading{
 text-align:center;
 }
 
-#staffFormHeading{
+#eventFormHeading{
 text-align:center;
 }
 input[type=submit] {
 text-align:center;
 }
 
-#staffEditButton{
-margin-left:0px;
+#eventEditButton{
+margin-left:0px%;
 width:120px;
 height:40px;
 }
-
-#staffDeleteButton{
+#eventDeleteButton{
 width:120px;
 height:40px;
 }
-
 
 

@@ -1,25 +1,23 @@
 /* for staff*/
-#staffDataTableHeading{
+#noticeDataTableHeading{
 text-align:center;
 }
 
-#staffFormHeading{
+#noticeFormHeading{
 text-align:center;
 }
 input[type=submit] {
 text-align:center;
 }
 
-#staffEditButton{
-margin-left:0px;
+#noticeEditButton{
+margin-left:0px%;
 width:120px;
 height:40px;
 }
-
-#staffDeleteButton{
+#noticeDeleteButton{
 width:120px;
 height:40px;
 }
-
 
 

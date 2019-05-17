@@ -1,5 +1,32 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>notice page here</h2>
+<br>
+<h3 id="noticeDataTableHeading">Notices Are Given Below</h3>
+<hr>
+<table class="table table-striped table-bordered" style="width:100%" id="manageNoticeTable">
+<thead>
+
+<tr>
+    <td>Notice Heading</td>
+    <td>Notice Details</td>
+    <td>Published Date</td>
+</tr>
+</thead>
+<tbody>
+{% for t in notice %}
+<tr>
+    <td><b>{{t.notice_heading}}</b></td>
+    <td>{{t.notice_details}}</td>
+    <td>{{t.notice_date}}</td>
+
+</tr>
+{% endfor %}
+
+</tbody>
+
+
+</table>
+
+
 {% endblock %}

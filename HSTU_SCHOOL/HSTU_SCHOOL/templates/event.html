@@ -1,5 +1,35 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>event page here</h2>
+<br>
+<h3 id="eventDataTableHeading">Event List Is Given Below</h3>
+<hr>
+<table class="table table-striped table-bordered" style="width:100%" id="eventTable">
+<thead>
+
+<tr>
+    <td>Event Heading</td>
+    <td>Event Location</td>
+    <td>Event Details</td>
+    <td>Published Date</td>
+</tr>
+</thead>
+<tbody>
+{% for t in event %}
+<tr>
+    <td>{{t.event_heading}}</td>
+    <td>{{t.event_location}}</td>
+    <td>{{t.event_details}}</td>
+    <td>{{t.event_date}}</td>
+
+</tr>
+{% endfor %}
+
+</tbody>
+
+
+</table>
+
+
+
 {% endblock %}

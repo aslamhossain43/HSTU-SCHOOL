@@ -25,8 +25,17 @@ urlpatterns = [
     path('editStaff/<id>',views.requestForUpdateStaffList,name='requestForUpdateStaffList'),
     path('updateStaffList/<id>',views.updateStaffList,name='updateStaff'),
     path('deleteStaff/<id>',views.deleteStaff,name='deleteStaff'),
+    # for notice
+    path('addNotice/', views.addNotice, name='addNotice'),
+    path('editNotice/<id>', views.requestForUpdateNotice, name='requestForUpdateNotice'),
+    path('updateNotice/<id>', views.updateNOtice, name='updateNotice'),
+    path('deleteNotice/<id>', views.deleteNotice, name='deleteNotice'),
 
-
+    # for event
+    path('addEvent/', views.addEvent, name='addEvent'),
+    path('editEvent/<id>', views.requestForUpdateEvent, name='requestForUpdateEvent'),
+    path('updateEvent/<id>', views.updateEvent, name='updateEvent'),
+    path('deleteEvent/<id>', views.deleteEvent, name='deleteEvent'),
 
 ]
 
