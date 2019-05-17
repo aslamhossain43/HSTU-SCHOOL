@@ -1,5 +1,34 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>staff-list page here</h2>
+
+<br>
+<h3 id="staffDataTableHeading">Staff List Is Given Below</h3>
+<hr>
+<table class="table table-striped table-bordered" style="width:100%" id="staffTable">
+<thead>
+
+<tr>
+    <td>Photo</td>
+    <td>Name</td>
+    <td>Job</td>
+    <td>Contact</td>
+</tr>
+</thead>
+<tbody>
+{% for t in sList %}
+<tr>
+    <td><img src="/images/{{t.photo_code}}.jpg" width="100" height="100"></td>
+    <td>{{t.name}}</td>
+    <td>{{t.job}}</td>
+    <td>{{t.contact}}</td>
+</tr>
+{% endfor %}
+
+</tbody>
+
+
+</table>
+
+
 {% endblock %}

@@ -14,10 +14,18 @@ urlpatterns = [
     path('event/', views.event,name='event'),
     path('news/', views.news,name='news'),
     path('manage/', views.manage,name='manage'),
+    # for teacher
     path('addTeacherList/',views.addTeacherList,name='addTeacherList'),
     path('editTeacher/<id>',views.requestForUpdateTeacherList,name='requestForUpdateTeacherList'),
     path('updateTeacherList/<id>',views.updateTeacherList,name='updateTeacher'),
     path('deleteTeacher/<id>',views.deleteTeacher,name='deleteTeacher'),
+
+    # for staff
+    path('addStaffList/',views.addStaffList,name='addStaffList'),
+    path('editStaff/<id>',views.requestForUpdateStaffList,name='requestForUpdateStaffList'),
+    path('updateStaffList/<id>',views.updateStaffList,name='updateStaff'),
+    path('deleteStaff/<id>',views.deleteStaff,name='deleteStaff'),
+
 
 
 ]

@@ -1,21 +1,18 @@
-/* for teacher*/
-#teacherDataTableHeading{
+/* for staff*/
+#staffDataTableHeading{
 text-align:center;
 }
 
-#teacherFormHeading{
+#staffFormHeading{
 text-align:center;
 }
 input[type=submit] {
 text-align:center;
 }
 
-#teacherEditButton{
+#staffEditButton{
 margin-left:22%;
 }
-
-
-
 
 
 
