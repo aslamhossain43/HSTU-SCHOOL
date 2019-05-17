@@ -1,5 +1,32 @@
 {% extends 'base.html' %}
 
+
 {% block content %}
-<h2>news page here</h2>
+<br>
+<h3 id="newsDataTableHeading">Newses Are Given Below</h3>
+<hr>
+<table class="table table-striped table-bordered" style="width:100%" id="manageNewsTable">
+<thead>
+
+<tr>
+    <td>News Heading</td>
+    <td>News Details</td>
+    <td>Published Date</td>
+</tr>
+</thead>
+<tbody>
+{% for t in newss %}
+<tr>
+    <td><b>{{t.news_heading}}</b></td>
+    <td>{{t.news_details}}</td>
+    <td>{{t.news_date}}</td>
+
+</tr>
+{% endfor %}
+
+</tbody>
+
+
+</table>
+
 {% endblock %}

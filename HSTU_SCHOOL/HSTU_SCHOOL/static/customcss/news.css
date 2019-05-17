@@ -1,0 +1,23 @@
+/* for staff*/
+#newsDataTableHeading{
+text-align:center;
+}
+
+#newsFormHeading{
+text-align:center;
+}
+input[type=submit] {
+text-align:center;
+}
+
+#newsEditButton{
+margin-left:0px%;
+width:120px;
+height:40px;
+}
+#newsDeleteButton{
+width:120px;
+height:40px;
+}
+
+

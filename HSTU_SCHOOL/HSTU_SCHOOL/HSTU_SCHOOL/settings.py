@@ -2,6 +2,10 @@
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+
+from django.conf.global_settings import EMAIL_HOST_USER, EMAIL_HOST_PASSWORD
+
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -121,5 +125,11 @@ STATICFILES_DIRS=[
 MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
 MEDIA_URL = '/images/'
 
-
+ # for email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 

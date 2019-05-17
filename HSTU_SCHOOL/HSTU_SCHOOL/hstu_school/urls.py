@@ -37,6 +37,15 @@ urlpatterns = [
     path('updateEvent/<id>', views.updateEvent, name='updateEvent'),
     path('deleteEvent/<id>', views.deleteEvent, name='deleteEvent'),
 
+    # for news
+    path('addNews/', views.addNews, name='addNews'),
+    path('editNews/<id>', views.requestForUpdateNews, name='requestForUpdateNews'),
+    path('updateNews/<id>', views.updateNews, name='updateNews'),
+    path('deleteNews/<id>', views.deleteNews, name='deleteNews'),
+   # for news
+    path('showEmailForm/',views.showEmailForm,name='showEmailForm'),
+    path('addEmail/', views.addEmail, name='addEmail'),
+    path('sendEmail/', views.sendEmail, name='sendEmail'),
 ]
 
 if settings.DEBUG: # remember to set 'DEBUG = True' in settings.py
