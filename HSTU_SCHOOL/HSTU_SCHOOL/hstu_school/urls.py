@@ -50,6 +50,15 @@ urlpatterns = [
     path('addFblink/',views.addFblink,name='addFblink'),
     # for fblink
     path('addTwitterlink/',views.addTwitterlink,name='addTwitterlink'),
+    # for contact
+    path('addContact/',views.addContact,name='addContact'),
+
+
+
+
+
+
+
 ]
 
 if settings.DEBUG: # remember to set 'DEBUG = True' in settings.py

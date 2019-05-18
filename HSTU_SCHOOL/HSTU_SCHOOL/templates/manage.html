@@ -655,6 +655,72 @@
 
 
 </table>
+<!--//------------------------------contact management start from here-----------------------------------------------//-->
+
+<br>
+<h3 id="contactFormHeading">Please Add Contacts</h3>
+<hr>
+
+<form action="/addContact/" method="post" class="was-validated">
+{% csrf_token %}
+
+    <div class="form-group">
+<label id="infoline">Info line : </label>
+<input class="form-control" type="text" name="infoline" autocomplete="off" required>
+    <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+
+
+    <div class="form-group">
+<label id="fax">Fax : </label>
+<input class="form-control" type="text" name="fax" autocomplete="off" required>
+    <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+<label id="email">Email : </label>
+<input class="form-control" type="email" name="email" autocomplete="off" required>
+    <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+<input class="btn btn-info " type="submit" value="Submit"><br>
+
+
+
+</form>
+
+<br>
+<h3 id="contactDataTableHeading">Contacts Are Given Below</h3>
+<hr>
+<table class="table table-striped table-bordered" style="width:100%" id="manageContactTable">
+<thead>
+
+<tr>
+    <td>Info line</td>
+    <td>Fax</td>
+    <td>Email</td>
+    <td>Published Date</td>
+ </tr>
+</thead>
+<tbody>
+{% for t in contacts %}
+<tr>
+    <td>{{t.info_line}}</td>
+    <td>{{t.fax}}</td>
+    <td>{{t.email}}</td>
+
+
+
+    <td>{{t.contact_date}}</td>
+
+</tr>
+{% endfor %}
+
+</tbody>
+
+
+</table>
 
 
 {% endblock %}
