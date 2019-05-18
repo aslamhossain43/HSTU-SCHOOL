@@ -560,4 +560,101 @@
 </table>
 
 
+
+
+<!--//------------------------------fblink management start from here-----------------------------------------------//-->
+
+<br>
+<h3 id="fblinkFormHeading">Please Add Facebook Link</h3>
+<hr>
+
+<form action="/addFblink/" method="post" class="was-validated">
+{% csrf_token %}
+
+    <div class="form-group">
+<label id="fblink">Facebook Link : </label>
+<input class="form-control" type="text" name="fblink" autocomplete="off" required>
+    <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+
+<input class="btn btn-info " type="submit" value="Submit"><br>
+
+
+
+</form>
+
+<br>
+<h3 id="fblinkDataTableHeading">Facebook Link is Given Below</h3>
+<hr>
+<table class="table table-striped table-bordered" style="width:100%" id="manageFblinkTable">
+<thead>
+
+<tr>
+    <td>Facebook Link</td>
+    <td>Published Date</td>
+ </tr>
+</thead>
+<tbody>
+{% for t in fblink %}
+<tr>
+    <td>{{t.fblink}}</td>
+    <td>{{t.fblink_date}}</td>
+
+</tr>
+{% endfor %}
+
+</tbody>
+
+
+</table>
+
+<!--//------------------------------twitter link management start from here-----------------------------------------------//-->
+
+<br>
+<h3 id="twitterlinkFormHeading">Please Add Twitter Link</h3>
+<hr>
+
+<form action="/addTwitterlink/" method="post" class="was-validated">
+{% csrf_token %}
+
+    <div class="form-group">
+<label id="twitterlink">Twitter Link : </label>
+<input class="form-control" type="text" name="twitterlink" autocomplete="off" required>
+    <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+
+<input class="btn btn-info " type="submit" value="Submit"><br>
+
+
+
+</form>
+
+<br>
+<h3 id="twitterlinkDataTableHeading">Twitter Link is Given Below</h3>
+<hr>
+<table class="table table-striped table-bordered" style="width:100%" id="manageTwitterlinkTable">
+<thead>
+
+<tr>
+    <td>Twitter Link</td>
+    <td>Published Date</td>
+ </tr>
+</thead>
+<tbody>
+{% for t in twitterlink %}
+<tr>
+    <td>{{t.twitterlink}}</td>
+    <td>{{t.twitterlink_date}}</td>
+
+</tr>
+{% endfor %}
+
+</tbody>
+
+
+</table>
+
+
 {% endblock %}

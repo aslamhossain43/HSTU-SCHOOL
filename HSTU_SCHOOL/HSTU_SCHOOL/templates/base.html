@@ -27,6 +27,8 @@
   <link href="{% static 'customcss/event.css' %}" rel="stylesheet">
   <link href="{% static 'customcss/news.css' %}" rel="stylesheet">
   <link href="{% static 'customcss/email.css' %}" rel="stylesheet">
+  <link href="{% static 'customcss/fblink.css' %}" rel="stylesheet">
+  <link href="{% static 'customcss/twitterlink.css' %}" rel="stylesheet">
 
   <style type="text/css">
     html,
@@ -123,7 +125,7 @@
           <!-- Right -->
           <ul class="navbar-nav nav-flex-icons">
             <li class="nav-item">
-              <a href="https://www.facebook.com/profile.php?id=100009005829552" class="nav-link" target="_blank">
+              <a href="{{fbLinkForNav.fblink}}" class="nav-link" target="_blank">
                 <i class="fab fa-facebook-f"></i>
               </a>
             </li>
@@ -133,8 +135,8 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link" target="_blank">
-              <i class="fa fa-phone"></i>
+              <a href="{{twitterLinkForNavbar.twitterlink}}" class="nav-link" target="_blank">
+              <i class="fab fa-twitter"></i>
               </a>
             </li>
 
@@ -382,6 +384,8 @@
   <script type="text/javascript" src="{% static 'customjs/event.js' %}"></script>
   <script type="text/javascript" src="{% static 'customjs/news.js' %}"></script>
   <script type="text/javascript" src="{% static 'customjs/email.js' %}"></script>
+  <script type="text/javascript" src="{% static 'customjs/fblink.js' %}"></script>
+  <script type="text/javascript" src="{% static 'customjs/twitterlink.js' %}"></script>
 
   <!-- Initializations -->
   <script type="text/javascript">

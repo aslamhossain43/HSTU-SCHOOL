@@ -46,6 +46,10 @@ urlpatterns = [
     path('showEmailForm/',views.showEmailForm,name='showEmailForm'),
     path('addEmail/', views.addEmail, name='addEmail'),
     path('sendEmail/', views.sendEmail, name='sendEmail'),
+    # for fblink
+    path('addFblink/',views.addFblink,name='addFblink'),
+    # for fblink
+    path('addTwitterlink/',views.addTwitterlink,name='addTwitterlink'),
 ]
 
 if settings.DEBUG: # remember to set 'DEBUG = True' in settings.py
