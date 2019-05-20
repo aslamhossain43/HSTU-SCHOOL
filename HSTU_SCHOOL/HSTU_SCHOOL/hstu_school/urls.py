@@ -52,6 +52,8 @@ urlpatterns = [
     path('addTwitterlink/',views.addTwitterlink,name='addTwitterlink'),
     # for contact
     path('addContact/',views.addContact,name='addContact'),
+    # for carousel
+    path('addCarousel/',views.addCarousel,name='addCarousel'),
 
 
 

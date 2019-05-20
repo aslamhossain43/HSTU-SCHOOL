@@ -721,6 +721,70 @@
 
 
 </table>
+<!--//-------------------------for carousel------------------>
+<br>
+<h3 id="carouselFormHeading">Please Add Carousel Pictures</h3>
+<hr>
+<form action="/addCarousel/" method="post" enctype="multipart/form-data" class="was-validated">
+{% csrf_token %}
+
+<div class="form-group">
+<label id="photo1">Photo1 : </label>
+<input class="form-control" type="file" name="photo1" autocomplete="off" required>
+<div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+</div>
+<div class="form-group">
+<label id="photo2">Photo2 : </label>
+<input class="form-control" type="file" name="photo2" autocomplete="off" required>
+<div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+</div>
+<div class="form-group">
+<label id="photo3">Photo3 : </label>
+<input class="form-control" type="file" name="photo3" autocomplete="off" required>
+<div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+</div>
+
+<input class="btn btn-info " type="submit" value="Submit"><br>
+
+
+
+</form>
+
+
+<br>
+<h3 id="carouselDataTableHeading">Carousel Pictures Are Given Below</h3>
+<hr>
+<table class="table table-striped table-bordered" style="width:100%" id="manageCarouselTable">
+<thead>
+
+<tr>
+    <td>Photo1</td>
+    <td>Photo2</td>
+    <td>Photo3</td>
+    <td>Published Date</td>
+
+</tr>
+</thead>
+<tbody>
+{% for t in carousels %}
+<tr>
+    <td><img src="/images/{{t.pic1}}.jpg" width="100" height="100"></td>
+    <td><img src="/images/{{t.pic2}}.jpg" width="100" height="100"></td>
+    <td><img src="/images/{{t.pic3}}.jpg" width="100" height="100"></td>
+    <td>{{t.carousel_date}}</td>
+
+</tr>
+{% endfor %}
+
+</tbody>
+
+
+</table>
+
+
 
 
 {% endblock %}
