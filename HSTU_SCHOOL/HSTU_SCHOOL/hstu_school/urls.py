@@ -54,12 +54,12 @@ urlpatterns = [
     path('addContact/',views.addContact,name='addContact'),
     # for carousel
     path('addCarousel/',views.addCarousel,name='addCarousel'),
-
-
-
-
-
-
+    # for home
+    path('addHome/',views.addHome,name='addHome'),
+    # for history
+    path('addHistory/',views.addHistory,name='addHistory'),
+    # for about
+    path('addAbout/', views.addAbout, name='addAbout'),
 
 ]
 

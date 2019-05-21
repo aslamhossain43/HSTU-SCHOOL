@@ -784,6 +784,161 @@
 
 </table>
 
+<!--//---------------------for home------------------------------//-->
+<br>
+<h3 id="homeFormHeading">Please Manage Home</h3>
+<hr>
+<form action="/addHome/" method="post" enctype="multipart/form-data" class="was-validated">
+{% csrf_token %}
+
+    <div class="form-group">
+<label id="home_pic">Home Picture : </label>
+<input class="form-control" type="file" name="home_pic" autocomplete="off" required>
+<div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+</div>
+
+
+<div class="form-group">
+<label id="home_text">Home Text : </label>
+    <textarea class="form-control" name="home_text" rows="5" autocomplete="off" required></textarea>
+    <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+</div>
+
+<input class="btn btn-info " type="submit" value="Submit"><br>
+
+
+
+</form>
+
+
+<br>
+<h3 id="homeDataTableHeading">Home Text And Pictures Are Given Below</h3>
+<hr>
+<table class="table table-striped table-bordered" style="width:100%" id="manageHomeTable">
+<thead>
+
+<tr>
+    <td>Picture</td>
+    <td>Text</td>
+    <td>Published Date</td>
+
+</tr>
+</thead>
+<tbody>
+{% for t in home %}
+<tr>
+    <td><img src="/images/{{t.home_pic}}.jpg" width="100" height="100"></td>
+    <td>{{t.home_text}}</td>
+    <td>{{t.home_date}}</td>
+
+</tr>
+{% endfor %}
+
+</tbody>
+
+
+</table>
+
+
+<!--//---------------------for history------------------------------//-->
+<br>
+<h3 id="historyFormHeading">Please Manage History</h3>
+<hr>
+<form action="/addHistory/" method="post" enctype="multipart/form-data" class="was-validated">
+{% csrf_token %}
+
+
+<div class="form-group">
+<label id="history_text">History Text : </label>
+    <textarea class="form-control" name="history_text" rows="6" autocomplete="off" required></textarea>
+    <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+</div>
+
+<input class="btn btn-info " type="submit" value="Submit"><br>
+
+
+
+</form>
+
+
+<br>
+<h3 id="historyDataTableHeading">History Is Given Below</h3>
+<hr>
+<table class="table table-striped table-bordered" style="width:100%" id="manageHistoryTable">
+<thead>
+
+<tr>
+    <td>History</td>
+    <td>Published Date</td>
+
+</tr>
+</thead>
+<tbody>
+{% for t in history %}
+<tr>
+    <td>{{t.history_text}}</td>
+    <td>{{t.history_date}}</td>
+
+</tr>
+{% endfor %}
+
+</tbody>
+
+
+</table>
+
+<!--//---------------------for about------------------------------//-->
+<br>
+<h3 id="aboutFormHeading">Please Manage About </h3>
+<hr>
+<form action="/addAbout/" method="post" enctype="multipart/form-data" class="was-validated">
+{% csrf_token %}
+
+
+<div class="form-group">
+<label id="about_text">About Text : </label>
+    <textarea class="form-control" name="about_text" rows="6" autocomplete="off" required></textarea>
+    <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+</div>
+
+<input class="btn btn-info " type="submit" value="Submit"><br>
+
+
+
+</form>
+
+
+<br>
+<h3 id="aboutDataTableHeading">About Is Given Below</h3>
+<hr>
+<table class="table table-striped table-bordered" style="width:100%" id="manageAboutTable">
+<thead>
+
+<tr>
+    <td>About</td>
+    <td>Published Date</td>
+
+</tr>
+</thead>
+<tbody>
+{% for t in about %}
+<tr>
+    <td>{{t.about_text}}</td>
+    <td>{{t.about_date}}</td>
+
+</tr>
+{% endfor %}
+
+</tbody>
+
+
+</table>
+
+
 
 
 
